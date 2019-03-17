@@ -16,6 +16,7 @@
   <properties>
 	 <spring-cloud-release-train.version>Greenwich.RELEASE</spring-cloud-release-train.version>
 	 <spring-cloud-sleuth-zipkin.version>2.1.0.RELEASE</spring-cloud-sleuth-zipkin.version>
+	 <springfox.version>2.9.2</springfox.version>
   </properties>
   
   <dependencyManagement>
@@ -65,6 +66,10 @@
 			<artifactId>jackson-dataformat-yaml</artifactId>
 		</dependency>
 		<dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-commons</artifactId>
+        </dependency>
+		<dependency>
 	        <groupId>org.springframework.cloud</groupId>
 	        <artifactId>spring-cloud-starter-sleuth</artifactId>
 	    </dependency>
@@ -87,6 +92,7 @@
 	    <dependency>
 	    	<groupId>org.projectlombok</groupId>
 	    	<artifactId>lombok</artifactId>
+	    	<version>1.18.6</version>
 	    </dependency>
 	    <dependency>
 		    <groupId>software.amazon.awssdk</groupId>
@@ -98,5 +104,38 @@
 			<artifactId>spring-cloud-aws-jdbc</artifactId>
 		</dependency>
 		 -->
+		<dependency>
+		  <groupId>org.mockito</groupId>
+		  <artifactId>mockito-core</artifactId>
+		  <version>2.25.0</version>
+		</dependency>
+		<dependency>
+		  <groupId>io.springfox</groupId>
+		  <artifactId>springfox-swagger2</artifactId>
+		  <version>${springfox.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>io.springfox</groupId>
+		  <artifactId>springfox-swagger-ui</artifactId>
+		  <version>${springfox.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>io.springfox</groupId>
+		  <artifactId>springfox-data-rest</artifactId>
+		  <version>${springfox.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>io.springfox</groupId>
+		  <artifactId>springfox-bean-validators</artifactId>
+		  <version>${springfox.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+		  <groupId>org.postgresql</groupId>
+          <artifactId>postgresql</artifactId>
+        </dependency>
 	</dependencies>
 </project>
